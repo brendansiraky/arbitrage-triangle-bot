@@ -1,4 +1,6 @@
-export const TOKENS = {
+import { config } from '../config'
+
+const _TOKENS = {
 	bsc: {
 		mainnet: {
 			WBNB: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
@@ -7,3 +9,5 @@ export const TOKENS = {
 		},
 	},
 }
+
+export const TOKENS = _TOKENS[config.NETWORK][config]

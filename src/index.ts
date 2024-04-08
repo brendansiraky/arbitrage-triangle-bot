@@ -1,4 +1,14 @@
-import { getTokenLookup } from './utils/getTokenLookup'
+import { fetchAllPools } from './api/fetchAllPools'
 
-//
-getTokenLookup().then(console.log)
+// Example usage:
+const network = 'eth'
+const exchange = 'uniswap_v3'
+
+fetchAllPools(network, exchange)
+	.then((allPools) => {
+		console.log('Fetched all pools:', allPools.length)
+		// Process the fetched pools here
+	})
+	.catch((error) => {
+		// Handle errors here
+	})
